@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html id="html" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Contact form</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-Green-200 flex justify-center items-center font-Karla min-h-screen">
+  <div class="card relative flex flex-col w-[90%] md:max-w-[440px] md:min-w-[310px] mb-4 mt-20 md:mt-0 bg-White rounded-xl shadow-xl p-6">
+    <h1 class="font-bold text-lg">Contact Us</h1>
+    <form action="">
+      <!-- _________________Name__________________________  -->
+      <div class="name flex md:flex-row flex-col gap-3 mt-3">
+        <label class="flex flex-1 flex-col text-[16px]"><div class="flex mb-1 text-Gray-900 font-medium">First Name<span class="text-green-900 font-bold">&nbsp;*</span></div>
+          <input id="firstName" class="border-[1px]  border-Gray-500 rounded-md p-1 ps-2 focus:border-Green-600 focus:outline-none active:border-Green-600 " type="text">
+          <p id="errorForFirstName" class="hidden text-[13px] font-normal text-Red my-[2px] ">This field is required</p>
+        </label>
+        <label class="flex flex-1 flex-col text-[16px]"><div class="flex mb-1 text-Gray-900 font-medium">Last Name<span class="text-green-900 font-bold">&nbsp;*</span></div>
+          <input id="lastName" class="border-[1px] border-Gray-500 rounded-md p-1 ps-2 focus:border-Green-600 focus:outline-none active:border-Green-600" type="text">
+          <p id="errorForLastName" class="hidden text-[13px] font-normal text-Red my-[2px] ">This field is required</p>
+        </label>
+      </div>
+      <!-- ________________Email____________________ -->
+      <label class="flex flex-col text-[16px]"><div class="flex mb-1 text-Gray-900 font-medium mt-4">Email Address<span class="text-green-900 font-bold">&nbsp;*</span></div>
+        <input id="email" class="border-[1px] border-Gray-500 rounded-md p-1 ps-2 focus:border-Green-600 focus:outline-none active:border-Green-600" type="email">
+        <p id="errorForEmail" class="hidden text-[13px] font-normal text-Red my-[2px]">please enter a valid email address</p>
+      </label>
+      <!-- _____________________type________________________ -->
+      <div class="text-Gray-900 font-medium mt-4">Query Type<span class="text-green-900 font-bold">&nbsp;*</span></div>
+      <div class="flex md:flex-row flex-col md:gap-3 gap-2 mt-2 mb-2">
+        <label  class="radio flex items-center gap-3 border-[1px] border-Gray-500 p-2 ps-2 flex-1 rounded-md duration-300  peer-active:bg-Green-600 focus:bg-Green-600 has-[:checked]:bg-Green-200 has-[:checked]:border-Green-600">
+        <input type="radio" name="type" class="w-4 h-4 accent-Green-600 " >
+          General Enquiry
+        </label>
+        <label class="radio flex items-center gap-3 border-[1px] border-Gray-500 p-2 ps-2 flex-1 rounded-md has-[:checked]:bg-Green-200 has-[:checked]:border-Green-600">
+          <input type="radio"  name="type" class=" w-4 h-4 accent-Green-600  ">
+          Support Request
+        </label>
+      </div>
+      <p id="errorForType" class="hidden text-[13px] font-medium text-Red mb-4">Please select a query type</p>
+      <!-- ______________________message _________________ -->
+      <label><div class="flex text-Gray-900 font-medium">Message<span class="text-green-900 font-bold">&nbsp;*</span></div>
+        <textarea id="Message" class="border-[1px] border-Gray-500 rounded-md mt-2 ps-2 w-full min-h-36 md:min-h-16 resize-none p-2 focus:border-Green-600 focus:outline-none active:border-Green-600" ></textarea>
+        <p id="errorForMessage" class="hidden text-[13px] font-medium text-Red mb-4">This field is required</p>
+      </label>
+      <div class="flex items-center gap-3 mt-3 ">
+        <input type="checkbox" name="test" id="check" class="accent-Green-600 cursor-pointer ">
+        <p class="font-medium text-sm">I consent to being contacted by the team<span class="text-green-900 font-bold">&nbsp;*</span></p>
+      </div>
+      <p id="errorForCheck" class="hidden text-[13px] font-medium text-Red mb-2">To submit this form, please consent to being contacted</p>
+      <input id="submit" type="submit" value="Submit" class="bg-Green-600 text-white p-3 w-full rounded-md mt-3 duration-300 hover:bg-green-600">
+    </form>
+    <div id="successCard" class="hidden absolute left-1/2 -translate-x-1/2 -top-14 w-[350px] max-w-[95%]  bg-Gray-900 text-white rounded-lg px-3 py-4 mt-0 md:mt-0 ">
+      <div class="flex gap-3">
+        <img src="images/icon-success-check.svg" alt="">
+        <h3 class="text-sm">Message Sent!</h3>
+      </div>
+      <p class="text-xs font-light mt-1">Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+  </div>
+
+</body>
+  <script src="javascript/main.js"></script>
+</body>
+</html>
